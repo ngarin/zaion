@@ -1,0 +1,14 @@
+{
+  "name": "zaion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-e2e": "cypress open"
+  },
+  "author": "Nicolas GARIN",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.11.0"
+  }
+}

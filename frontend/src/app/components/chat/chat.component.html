@@ -1,0 +1,14 @@
+<div class="chat">
+    <div class="discussion">
+        <div *ngFor="let message of messages" class="message">
+            <span class="user">{{ message.username }} : </span>
+            <span class="message-content">{{ message.content }}</span>
+        </div>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <mat-form-field appearance="fill">
+            <mat-label>Hello {{ username }} Type your message and press ENTER</mat-label>
+            <input type="text" matInput formControlName="message" />
+        </mat-form-field>
+    </form>
+</div>

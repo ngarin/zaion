@@ -1,0 +1,16 @@
+{
+    "version": "5.0.4",
+    "compilerOptions": {
+      "outDir": "./dist",
+      "lib": ["es5", "es6"],
+      "sourceMap": true,
+      "declaration": false,
+      "esModuleInterop": true,
+      "module": "commonjs",
+      "target": "es6",
+      "moduleResolution": "node",
+      "baseUrl": "./src"
+    },
+    "exclude": ["**/*.test.ts"]
+  }
+  

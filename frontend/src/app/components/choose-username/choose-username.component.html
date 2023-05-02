@@ -1,0 +1,10 @@
+<div class="choose-username">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <mat-form-field appearance="fill">
+            <mat-label>Choose an username</mat-label>
+            <input class="username-input" type="text" matInput formControlName="username" />
+        </mat-form-field>
+
+        <button class="username-submit-button" type="submit" mat-raised-button color="primary">Send</button>
+    </form>
+</div>

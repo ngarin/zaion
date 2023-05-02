@@ -1,0 +1,14 @@
+<div class="join-chat">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <mat-form-field appearance="fill">
+            <mat-label>Room ID</mat-label>
+            <input type="text" matInput formControlName="roomID" />
+        </mat-form-field>
+
+        <button type="submit" mat-raised-button color="primary">Join Room</button>
+
+        <p>OR</p>
+    
+        <button (click)="create()" type="button" mat-button>Create Room</button>
+    </form>
+</div>
