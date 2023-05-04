@@ -10,7 +10,7 @@ Run `npm ci` before anything
 
 ## Run the project
 
-Run `make run` to build and run the project
+Run `make run` to build and run the project and the add is available here : `http://localhost`
 
 ## Run unit tests
 

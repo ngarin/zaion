@@ -4,6 +4,7 @@ DOCKER_COMPOSE_CMD = docker-compose -f $(DOCKER_COMPOSE_FILE)
 .PHONY: run build up down clean logs backend-shell frontend-shell run-test
 
 run:
+	@npm ci
 	@make clean
 	@make build
 	@make up
@@ -41,8 +42,12 @@ frontend-shell:
 	@$(DOCKER_COMPOSE_CMD) exec frontend sh
 
 tests:
+	@npm ci --prefix backend
+	@npm ci --prefix frontend
 	@npm test --prefix backend
 	@npm test --prefix frontend
 
 e2e-tests:
+	@make run
+	@npm ci
 	@npm run test-e2e

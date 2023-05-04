@@ -28,9 +28,9 @@ describe('ChatComponent', () => {
   it('should not submit message if form empty', () => {
     component.submit()
 
-    spyOn(component['_sendMessage'], 'emit')
+    spyOn(component['sendMessage'], 'emit')
 
-    expect(component['_sendMessage'].emit).not.toHaveBeenCalled()
+    expect(component['sendMessage'].emit).not.toHaveBeenCalled()
   });
 
   it('should submit message', () => {
@@ -39,10 +39,10 @@ describe('ChatComponent', () => {
     component.form.setValue({ message })
     component.form.updateValueAndValidity()
   
-    spyOn(component['_sendMessage'], 'emit')
+    spyOn(component['sendMessage'], 'emit')
 
     component.submit()
 
-    expect(component['_sendMessage'].emit).toHaveBeenCalledWith(message)
+    expect(component['sendMessage'].emit).toHaveBeenCalledWith(message)
   });
 });

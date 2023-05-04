@@ -28,9 +28,9 @@ describe('JoinChatComponent', () => {
   it('should not submit roomID if form empty', () => {
     component.submit()
 
-    spyOn(component['_joinRoom'], 'emit')
+    spyOn(component['joinRoom'], 'emit')
 
-    expect(component['_joinRoom'].emit).not.toHaveBeenCalled()
+    expect(component['joinRoom'].emit).not.toHaveBeenCalled()
   });
 
   it('should submit roomID', () => {
@@ -39,18 +39,18 @@ describe('JoinChatComponent', () => {
     component.form.setValue({ roomID })
     component.form.updateValueAndValidity()
   
-    spyOn(component['_joinRoom'], 'emit')
+    spyOn(component['joinRoom'], 'emit')
 
     component.submit()
 
-    expect(component['_joinRoom'].emit).toHaveBeenCalledWith(roomID)
+    expect(component['joinRoom'].emit).toHaveBeenCalledWith(roomID)
   });
 
   it('should create a room', () => {
-    spyOn(component['_createRoom'], 'emit')
+    spyOn(component['createRoom'], 'emit')
   
     component.create()
 
-    expect(component['_createRoom'].emit).toHaveBeenCalled()
+    expect(component['createRoom'].emit).toHaveBeenCalled()
   });
 });
